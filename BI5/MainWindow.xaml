@@ -1,0 +1,118 @@
+﻿<Window x:Class="BI5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BI5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="BTN_nuova_partita" Content="Nuova Partita" Width="80" Click="BTN_nuova_partita_Click" />
+
+            <Button x:Name="BTN_asta" Grid.Column="1" Content="Asta" Width="80" Click="BTN_asta_Click" />
+
+            <Button x:Name="BTN_inizia" Grid.Column="2" Content="Inizia" Width="80" Click="BTN_inizia_Click" />
+
+            <Button x:Name="BTN_giocatori" Grid.Column="3" Content="Giocatori" Width="80" Click="BTN_giocatori_Click" />
+
+ 
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <Grid x:Name="LV" Background="Green">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180" />
+                <RowDefinition Height="180" />
+                <RowDefinition Height="180" />
+                <RowDefinition Height="180" />
+                <RowDefinition Height="180" />
+            </Grid.RowDefinitions>
+            
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="260" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+            
+            <Grid Height="260">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="150" />
+                </Grid.ColumnDefinitions>      
+                
+                <Grid x:Name="GRID_current_partita">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />                        
+                    </Grid.RowDefinitions>
+
+                    <Label>Chiamante</Label>
+
+                        <Label x:Name="LABEL_chiamante" Grid.Row="1" FontSize="18" Content="{Binding Path=chiamante.nome}" />
+
+                    <Label Grid.Row="2">Chiamata</Label>
+
+                    <Label x:Name="LABEL_chiamata" Grid.Row="3" FontSize="18" FontWeight="Bold" Content="{Binding Path=chiamata}" />
+
+                    <Label Grid.Row="4">Seme</Label>
+
+                        <Label x:Name="LABEL_seme" Grid.Row="5" FontSize="18" Content="{Binding Path=briscola}" />
+
+                    <Label Grid.Row="6">Carta</Label>
+
+                        <Label x:Name="LABEL_carta" Grid.Row="7" FontSize="18" Content="{Binding Path=carta_chiamata.valore}" />                    
+
+                </Grid>
+
+                    <Border Grid.Column="1" BorderBrush="Black" BorderThickness="2" Width="120" Height="180">
+                        <Image x:Name="IMG_called" Width="100" Height="160" HorizontalAlignment="Left"                       
+                             VerticalAlignment="Top" Stretch="UniformToFill" />
+                    </Border>
+
+                </Grid>
+
+                <ListBox x:Name="LB_messages" Grid.Row="1" />
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Window>

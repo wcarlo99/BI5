@@ -1,0 +1,20 @@
+﻿<Window x:Class="BI5.UCs.WNDasta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BI5.UCs"
+        mc:Ignorable="d"
+        Title="WNDasta" Height="248.053" Width="311.27">
+    <Grid>
+        <ComboBox x:Name="CB_chiamante" HorizontalAlignment="Left" Height="27" Margin="108,10,0,0" VerticalAlignment="Top" Width="142"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TB_chiamata" HorizontalAlignment="Left" Text="71" Padding="0"
+                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                 Height="26" Margin="108,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" FontSize="18" FontWeight="Bold"/>
+        <ComboBox x:Name="CB_seme" HorizontalAlignment="Left" Height="27" Margin="108,73,0,0" VerticalAlignment="Top" Width="142"/>
+        <ComboBox x:Name="CB_carta" HorizontalAlignment="Left" Height="27" Margin="108,105,0,0" VerticalAlignment="Top" Width="142"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="175,159,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
+    </Grid>
+</Window>

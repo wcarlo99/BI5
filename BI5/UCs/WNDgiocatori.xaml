@@ -1,0 +1,59 @@
+﻿<Window x:Class="BI5.UCs.WNDgiocatori"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BI5.UCs"
+        mc:Ignorable="d"
+        Title="Giocatori" Height="270" Width="400">
+    
+    <Window.Resources>
+        <Style TargetType="Label">           
+            <Setter Property="HorizontalContentAlignment" Value="Center" />            
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+
+        <Style TargetType="TextBox">            
+            <Setter Property="HorizontalContentAlignment" Value="Center" />            
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />            
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="1">G1</Label>
+        <Label Grid.Column="0" Grid.Row="2">G2</Label>
+        <Label Grid.Column="0" Grid.Row="3">G3</Label>
+        <Label Grid.Column="0" Grid.Row="4">G4</Label>
+        <Label Grid.Column="0" Grid.Row="5">G5</Label>
+
+        <TextBox x:Name="TB0" Grid.Column="1" Grid.Row="1" CharacterCasing="Upper" />
+        <TextBox x:Name="TB1" Grid.Column="1" Grid.Row="2" CharacterCasing="Upper" />
+        <TextBox x:Name="TB2" Grid.Column="1" Grid.Row="3" CharacterCasing="Upper" />
+        <TextBox x:Name="TB3" Grid.Column="1" Grid.Row="4" CharacterCasing="Upper" />
+        <TextBox x:Name="TB4" Grid.Column="1" Grid.Row="5" CharacterCasing="Upper" />
+
+        <Button x:Name="BTN_ok" VerticalAlignment="Center"
+                Grid.Column="1" Grid.Row="7" 
+                Width="60" Height="20" Content="OK" Click="BTN_ok_Click" />
+
+    </Grid>
+</Window>

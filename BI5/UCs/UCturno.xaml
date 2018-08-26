@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="BI5.UCs.UCturno"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BI5.UCs"
+             mc:Ignorable="d">
+    <Grid>
+        
+        <Rectangle x:Name="R_NO" Width="40" Height="40" Fill="Green" RadiusX="20" RadiusY="20"/>
+        <Rectangle x:Name="R_YES" Width="40" Height="40" Fill="Red" RadiusX="20" RadiusY="20"/>
+        
+    </Grid>
+</UserControl>
